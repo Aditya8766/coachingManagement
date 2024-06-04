@@ -18,7 +18,6 @@ const AdminHomePage = () => {
     const { sclassesList } = useSelector((state) => state.sclass);
     const { teachersList } = useSelector((state) => state.teacher);
 
-    const { currentUser } = useSelector(state => state.user)
 
     // const adminID = currentUser._id
 

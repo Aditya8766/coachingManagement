@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteUser, getUserDetails, updateUser } from '../../../redux/userRelated/userHandle';
+import { getUserDetails, updateUser } from '../../../redux/userRelated/userHandle';
 import { useNavigate, useParams } from 'react-router-dom'
 import { getSubjectList } from '../../../redux/sclassRelated/sclassHandle';
 import { Box, Button, Collapse, IconButton, Table, TableBody, TableHead, Typography, Tab, Paper, BottomNavigation, BottomNavigationAction, Container } from '@mui/material';
@@ -48,7 +48,6 @@ const ViewStudent = () => {
     const [rollNum, setRollNum] = useState('');
     const [password, setPassword] = useState('');
     const [sclassName, setSclassName] = useState('');
-    const [studentSchool, setStudentSchool] = useState('');
     const [subjectMarks, setSubjectMarks] = useState('');
     const [subjectAttendance, setSubjectAttendance] = useState([]);
 
@@ -84,7 +83,6 @@ const ViewStudent = () => {
             setName(userDetails.name || '');
             setRollNum(userDetails.rollNum || '');
             setSclassName(userDetails.sclassName || '');
-            setStudentSchool(userDetails.school || '');
             setSubjectMarks(userDetails.examResult || '');
             setSubjectAttendance(userDetails.attendance || []);
         }
